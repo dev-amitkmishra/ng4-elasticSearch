@@ -24,7 +24,6 @@ export class SearchComponent implements OnInit {
   search($event) {
     if ($event.timeStamp - this.lastKeypress > 100) {
       this.queryText = $event.target.value;
-      debugger;
       this.es.fullTextSearch(
         SearchComponent.INDEX,
         SearchComponent.TYPE,
