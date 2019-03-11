@@ -1,0 +1,11 @@
+<div style="margin-top:20px">
+  <input type="text" (keyup)="search($event)" placeholder="enter address" class="input">
+ 
+  <div *ngFor="let userSource of userSources" style="margin-top:20px">
+    <app-user-details [user]='userSource._source'></app-user-details>
+  </div>
+ 
+  <div *ngIf="userSources?.length < 1" style="margin-top:20px">
+    <p>Not found!</p>
+  </div>
+</div>
