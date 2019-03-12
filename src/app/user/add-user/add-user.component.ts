@@ -14,7 +14,7 @@ export class AddUserComponent implements OnInit {
   form: FormGroup;
   status: string;
   model: any = {
-    index: '',
+    index: 'jsa_user_idx',
     id: '',
     fullname: '',
     age: 0,
@@ -24,7 +24,7 @@ export class AddUserComponent implements OnInit {
   constructor(private fbuilder: FormBuilder, private es: ElasticsearchService, private cd: ChangeDetectorRef) {
     this.isConnected = false;
 
-    this.form = fbuilder.group({
+    this.form = this.fbuilder.group({
       index: [''],
       id: [''],
       fullname: [''],
@@ -50,7 +50,7 @@ export class AddUserComponent implements OnInit {
 
     this.es.addToIndex({
       index: value.index,
-      type: 'customer',
+      type: 'user',
       id: value.id,
       body: {
         fullname: value.fullname,

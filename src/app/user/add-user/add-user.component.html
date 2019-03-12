@@ -6,7 +6,7 @@
 		<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
 			<div class="form-group">
 				<label class="control-label" for="index">Index</label>
-				<input type="text" class="form-control" id="index" formControlName="index" [(ngModel)]="model.index" name="index">
+				<input type="text" class="form-control" id="index" formControlName="index" [(ngModel)]="model.index" name="index" readonly>
 			</div>
 			<div class="panel panel-primary">
 				<div class="panel-heading">User</div>

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddUserComponent } from './customer/add-user/add-user.component';
-import { ShowUsersComponent } from './customer/show-users/show-users.component';
-import { SearchComponent } from './customer/search/search.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { ShowUsersComponent } from './user/show-users/show-users.component';
+import { SearchComponent } from './user/search/search.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'add', pathMatch: 'full' },
